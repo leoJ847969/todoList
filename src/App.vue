@@ -1,16 +1,13 @@
 <template>
-  <v-app>
-    <titleBar />
+  <v-app >
     
+    <titleBar />
+    <sideBar />
     <v-main>
-      <!-- <router-view /> -->
-
+      <todoList />
     </v-main>
   </v-app>
 </template>
 
 <script setup>
-import TitleBar from './components/titleBar.vue';
-
-  //
 </script>
