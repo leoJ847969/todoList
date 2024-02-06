@@ -25,15 +25,12 @@
 </script>
 <template>
     <v-navigation-drawer permanent=true>
-        <!-- <v-text-field variant="outlined" density></v-text-field> -->
-        <v-row no-gutter>
-            <v-col>
-                <v-text-field class="" density="compact" v-model="listTitleText"></v-text-field>
-            </v-col>
-            <v-col cols="4">
-                <v-btn block @click="addTDList"> + </v-btn>
-            </v-col>
-        </v-row>
+        <v-text-field density="compact" v-model="listTitleText" style="height: 40px;" ></v-text-field>
+        <v-btn block @click="addTDList" rounded="0" variant="tonal"> + </v-btn>
+        
+        
+        
+        
         <v-list>   
             <v-list-item v-for="(item, i) in listTitles" :key="i" :value="item">
                 {{ item.text }}
