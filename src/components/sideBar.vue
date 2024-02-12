@@ -25,15 +25,23 @@
 </script>
 <template>
     <v-navigation-drawer permanent=true>
-        <v-text-field  v-model="listTitleText" >
-            <template v-slot:append-inner>
+        <v-text-field  
+            v-model="listTitleText"
+            append-inner-icon="mdi-plus"
+            @keydown.enter="addTDList"
+            @click:append-inner="addTDList"
+            label="Add To Do List"
+
+        >
+            <!-- <template v-slot:append-inner>
                 <v-btn block @click="addTDList" > + </v-btn>
-            </template>    
+            </template>     -->
         </v-text-field>
         
             
         <v-list>   
             <v-list-item v-for="(item, i) in listTitles" :key="i" :value="item">
+                <!-- <router-link ></router-link> -->
                 {{ item.text }}
             </v-list-item>
         </v-list>
